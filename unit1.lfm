@@ -1,0 +1,215 @@
+object Form1: TForm1
+  Left = 973
+  Height = 417
+  Top = 306
+  Width = 708
+  Caption = 'Form1'
+  ClientHeight = 417
+  ClientWidth = 708
+  Color = 16744576
+  Constraints.MaxHeight = 417
+  Constraints.MaxWidth = 708
+  Constraints.MinHeight = 362
+  Constraints.MinWidth = 598
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object edtPrincipal: TEdit
+    AnchorSideRight.Control = edtRate
+    Left = 7
+    Height = 81
+    Top = 80
+    Width = 178
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 25
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 10
+    OnChange = edtPrincipalChange
+    OnKeyPress = edtPrincipalKeyPress
+    ParentFont = False
+    TabOrder = 0
+  end
+  object edtRate: TEdit
+    AnchorSideLeft.Control = edtPrincipal
+    AnchorSideRight.Control = edtTime
+    AnchorSideBottom.Control = memResult
+    Left = 208
+    Height = 37
+    Top = 80
+    Width = 184
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 201
+    BorderSpacing.Right = 16
+    BorderSpacing.Bottom = 19
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 10
+    OnKeyPress = edtRateKeyPress
+    ParentFont = False
+    TabOrder = 1
+  end
+  object edtTime: TEdit
+    AnchorSideLeft.Control = edtRate
+    AnchorSideBottom.Control = lblProcent
+    Left = 408
+    Height = 26
+    Top = 80
+    Width = 152
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 200
+    BorderSpacing.Bottom = 16
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 10
+    OnKeyPress = edtTimeKeyPress
+    ParentFont = False
+    TabOrder = 2
+  end
+  object lblPrincipal: TLabel
+    AnchorSideBottom.Control = edtPrincipal
+    Left = 7
+    Height = 27
+    Top = 32
+    Width = 178
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 21
+    Caption = 'Начальная сумма (руб.)'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = lblPrincipalClick
+  end
+  object lblRate: TLabel
+    AnchorSideBottom.Control = edtRate
+    Left = 208
+    Height = 31
+    Top = 32
+    Width = 184
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 17
+    Caption = 'Процентная ставка (%)'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = lblRateClick
+  end
+  object lblTime: TLabel
+    AnchorSideBottom.Control = edtTime
+    Left = 408
+    Height = 37
+    Top = 28
+    Width = 152
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 15
+    Caption = 'Время (сутки)'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = lblTimeClick
+  end
+  object btnCalculate: TButton
+    Left = 211
+    Height = 87
+    Top = 224
+    Width = 250
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Посчитать'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnCalculateClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object cbxCalculationType: TComboBox
+    Left = 374
+    Height = 21
+    Top = 147
+    Width = 248
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 13
+    ItemWidth = 20
+    ParentFont = False
+    TabOrder = 4
+  end
+  object memResult: TMemo
+    AnchorSideRight.Control = cbxCalculationType
+    AnchorSideBottom.Control = btnCalculate
+    Left = 211
+    Height = 65
+    Top = 136
+    Width = 138
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 25
+    BorderSpacing.Bottom = 23
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object lblProcent: TLabel
+    AnchorSideBottom.Control = cbxCalculationType
+    Left = 374
+    Height = 16
+    Top = 122
+    Width = 87
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Bottom = 6
+    Caption = 'Проценты'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object btnClose: TBitBtn
+    Left = 211
+    Height = 91
+    Top = 304
+    Width = 250
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Выход'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Small Fonts'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ModalResult = 3
+    OnClick = btnCloseClick
+    ParentFont = False
+    TabOrder = 6
+  end
+end
